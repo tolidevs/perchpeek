@@ -10,8 +10,15 @@ export type Activity = Note | Task
 
 export interface Note {
     id: number;
+    type: ActivityType,
     propertyURL?: string;
     notes: string;
+}
+
+export enum ActivityType {
+    note = 'note',
+    enquiry = 'property enquiry',
+    task = 'task'
 }
 
 export interface Task extends Note {

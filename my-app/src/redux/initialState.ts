@@ -1,30 +1,35 @@
-import { Activity, User } from './model'
+import { Activity, User, ActivityType } from './model'
 
 export const initialList: Activity[] = [
     {
         id: 0,
         propertyURL: 'https://www.perchpeek.com/properties/XyD3Slx4Rj7EaAHzVB4M',
-        notes: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum id cumque nesciunt reprehenderit vel velit libero exercitationem adipisci consequatur amet eos, illum deserunt veritatis. Animi sapiente reiciendis quas quibusdam repudiandae.'
+        notes: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum id cumque nesciunt reprehenderit vel velit libero exercitationem adipisci consequatur amet eos, illum deserunt veritatis. Animi sapiente reiciendis quas quibusdam repudiandae.',
+        type: ActivityType.note
     },
     {
         id: 1,
         propertyURL: 'https://www.perchpeek.com/properties/XyD3Slx4Rj7EaAHzVB4M',
-        notes: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum id cumque nesciunt reprehenderit vel velit libero exercitationem adipisci consequatur amet eos, illum deserunt veritatis. Animi sapiente reiciendis quas quibusdam repudiandae.'
+        notes: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum id cumque nesciunt reprehenderit vel velit libero exercitationem adipisci consequatur amet eos, illum deserunt veritatis. Animi sapiente reiciendis quas quibusdam repudiandae.',
+        type: ActivityType.note
     },
     {
         id: 2,
         propertyURL: 'https://www.perchpeek.com/properties/XyD3Slx4Rj7EaAHzVB4M',
-        notes: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum id cumque nesciunt reprehenderit vel velit libero exercitationem adipisci consequatur amet eos, illum deserunt veritatis. Animi sapiente reiciendis quas quibusdam repudiandae.'
+        notes: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum id cumque nesciunt reprehenderit vel velit libero exercitationem adipisci consequatur amet eos, illum deserunt veritatis. Animi sapiente reiciendis quas quibusdam repudiandae.',
+        type: ActivityType.note
     },
     {
         id: 3,
         propertyURL: 'https://www.perchpeek.com/properties/XyD3Slx4Rj7EaAHzVB4M',
-        notes: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum id cumque nesciunt reprehenderit vel velit libero exercitationem adipisci consequatur amet eos, illum deserunt veritatis. Animi sapiente reiciendis quas quibusdam repudiandae.'
+        notes: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum id cumque nesciunt reprehenderit vel velit libero exercitationem adipisci consequatur amet eos, illum deserunt veritatis. Animi sapiente reiciendis quas quibusdam repudiandae.',
+        type: ActivityType.task
     },
     {
         id: 4,
         propertyURL: 'https://www.perchpeek.com/properties/XyD3Slx4Rj7EaAHzVB4M',
         notes: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum id cumque nesciunt reprehenderit vel velit libero exercitationem adipisci consequatur amet eos, illum deserunt veritatis. Animi sapiente reiciendis quas quibusdam repudiandae.',
+        type: ActivityType.enquiry,
         teamMember: {
             id: 0,
             name: 'John Doe',

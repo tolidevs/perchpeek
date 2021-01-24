@@ -1,9 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom'
-import TopBar from './Components/TobBar/TopBar'
+import TopBar from './Components/TopBar/TopBar'
 import SideBar from './Components/SideBar/SideBar'
-// import UserCard from './Components/UserCard/UserCard'
+import TabBar from './Components/TabBar/TabBar'
+
 import UserCardContainer from './Containers/UserCardContainer/UserCardContainer'
+import TabPanelContainer from './Containers/TabPanelContainer/TabPanelContainer'
 
 import { CssBaseline } from '@material-ui/core'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
@@ -33,8 +35,10 @@ export const App: React.FC = () => {
         <SideBar/>
         <main className={classes.content}>
           <div className={classes.toolbar} />
-          {/* <UserCard/> */}
-          <UserCardContainer/>
+   
+          <UserCardContainer />
+          <TabBar />
+          <TabPanelContainer />
         </main>
       </div>
     </Router>
