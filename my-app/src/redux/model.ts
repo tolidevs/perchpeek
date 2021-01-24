@@ -1,5 +1,5 @@
 
-export interface InitialState {
+export interface IInitialState {
     activities: Activity[],
     client: User,
     activityID: number,

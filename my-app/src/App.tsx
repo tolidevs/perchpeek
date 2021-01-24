@@ -2,12 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom'
 import TopBar from './Components/TobBar/TopBar'
 import SideBar from './Components/SideBar/SideBar'
-import './App.css';
+// import UserCard from './Components/UserCard/UserCard'
+import UserCardContainer from './Containers/UserCardContainer/UserCardContainer'
 
 import { CssBaseline } from '@material-ui/core'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 
-function App() {
+export const App: React.FC = () => {
 
   const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -17,7 +18,7 @@ function App() {
     toolbar: theme.mixins.toolbar,
     content: {
       flexGrow: 1,
-      padding: theme.spacing(3),
+      padding: theme.spacing(5),
     },
   }))
 
@@ -31,8 +32,10 @@ function App() {
         <TopBar/>
         <SideBar/>
         <main className={classes.content}>
-        <div className={classes.toolbar} />
-      </main>
+          <div className={classes.toolbar} />
+          {/* <UserCard/> */}
+          <UserCardContainer/>
+        </main>
       </div>
     </Router>
   );

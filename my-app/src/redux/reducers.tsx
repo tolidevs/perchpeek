@@ -1,13 +1,11 @@
 import { initialList, teamMembers, client } from './initialState'
-import { InitialState } from './model'
+import { IInitialState } from './model'
 import * as actions from './actions'
 
-const initialState: InitialState = { activities: initialList, client, activityID: 5, teamMember: teamMembers[0], teamMembers }
+const initialState: IInitialState = { activities: initialList, client, activityID: 5, teamMember: teamMembers[0], teamMembers }
 
-const rootReducer = ( state = initialState, action: any ) => {
+export const rootReducer = ( state: IInitialState = initialState, action: any ) => {
     switch (action.type) {
-        default:
-            return state;
         case actions.ADD_ACTIVITY:
             return {
                 ...state,
@@ -15,7 +13,9 @@ const rootReducer = ( state = initialState, action: any ) => {
                     action.payload
                 ],
                 activityId: ++state.activityID
-            }
+            };
+        default:
+            return state;
     }
 }
 
