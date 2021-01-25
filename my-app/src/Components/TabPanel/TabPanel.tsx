@@ -42,17 +42,17 @@ export const TabPanel: React.FC<TabPanelOwnProps> = ( props ) => {
     })
 
     return (
-        <div role='tabpanel'>
+        <div role='tabpanel' data-testid='tabPanel'>
             <Box className={classes.tabPanel}>
                 <div className={classes.addActivity}>
-                    <IconButton onClick={onAddActivity}>
+                    <IconButton onClick={onAddActivity} data-testid='plusButton'>
                         <AddCircleIcon color='secondary' fontSize='large' />
                     </IconButton>
                     <Typography variant='h6' >
                         Add a new activity
                     </Typography>
                 </div>
-                <List>
+                <List data-testid='activitiesList'>
                     {activitiesList}
                 </List>
             </Box>

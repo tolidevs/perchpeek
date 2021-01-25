@@ -52,15 +52,15 @@ export const TopBar: React.FC = () => {
   const classes = useStyles();
 
   return (
-      <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar className={classes.topBar}>
-          <div className={classes.search}>
-            <div className={classes.searchIcon}><SearchIcon/></div>
-            <InputBase placeholder="Search..." />
-          </div>
-          <AccountCircleOutlinedIcon className={classes.accountIcon}/>
-        </Toolbar>
-      </AppBar>   
+    <AppBar position="fixed" className={classes.appBar} data-testid='topBar'>
+      <Toolbar className={classes.topBar}>
+        <div className={classes.search}>
+          <div className={classes.searchIcon}><SearchIcon/></div>
+          <InputBase placeholder="Search..." />
+        </div>
+        <AccountCircleOutlinedIcon className={classes.accountIcon}/>
+      </Toolbar>
+    </AppBar>
   );
 }
 

@@ -45,7 +45,7 @@ export const UserCard: React.FC<UserCardOwnProps> = ( props ) => {
     const classes = useStyles()
 
     return(
-        <div aria-label="User card">
+        <div aria-label="User card" data-testid='userCard'>
             <Typography variant="h3" component="h2">{clientName}</Typography>
             <div className={classes.card}>
                 <AccountCircleOutlinedIcon className={classes.accountIcon} />

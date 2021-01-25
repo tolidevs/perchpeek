@@ -110,6 +110,7 @@ export const AddActivityModal: React.FC<AddActivityModalOwnProps> = ( props ) =>
             className={classes.modal}
             open={isOpen}
             onClose={() => onRequestClose}
+            data-testid='addActivityModal'
         >
             <Card className={classes.box}>
                 <CardHeader
@@ -129,7 +130,7 @@ export const AddActivityModal: React.FC<AddActivityModalOwnProps> = ( props ) =>
                             name="type"
                             className={classes.selectEmpty}
                         >
-                            {Object.keys(ActivityType).map( type => <MenuItem value={type}>{type}</MenuItem>)}
+                            {Object.keys(ActivityType).map( type => <MenuItem value={type} key={type}>{type}</MenuItem>)}
                         </Select>
                     </FormControl>
 

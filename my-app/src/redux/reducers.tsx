@@ -2,7 +2,7 @@ import { initialList, teamMembers, client } from './initialState'
 import { IInitialState } from './model'
 import * as actions from './actions'
 
-const initialState: IInitialState = { activities: initialList, client, activityID: 5, teamMember: teamMembers[0], teamMembers, addActivityModalIsOpen: false }
+export const initialState: IInitialState = { activities: initialList, client, activityID: 5, teamMember: teamMembers[0], teamMembers, addActivityModalIsOpen: false }
 
 export const rootReducer = ( state: IInitialState = initialState, action: any ) => {
     switch (action.type) {

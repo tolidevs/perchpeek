@@ -35,7 +35,7 @@ export const SideBar: React.FC = () => {
     const classes = useStyles();
 
     return (
-        <div>
+        <div data-testid="sideBar">
             <nav className={classes.drawer}>
                 <Drawer
                     className={classes.drawer}

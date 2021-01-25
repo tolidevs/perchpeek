@@ -6,7 +6,7 @@ export const TabBar: React.FC = () => {
     const handleChange = () => alert('Data not available')
     
     return (
-        <Paper>
+        <Paper data-testid='tabBar'>
             <Tabs
                 value={0}
                 onChange={handleChange}
