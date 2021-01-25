@@ -5,14 +5,15 @@ export interface IInitialState {
     activityID: number,
     teamMember: User
     teamMembers: User[]
+    addActivityModalIsOpen: boolean;
 }
-export type Activity = Note | Task
 
-export interface Note {
+export interface Activity {
     id: number;
     type: ActivityType,
     propertyURL?: string;
     notes: string;
+    teamMember?: User;
 }
 
 export enum ActivityType {
@@ -20,11 +21,6 @@ export enum ActivityType {
     enquiry = 'property enquiry',
     task = 'task'
 }
-
-export interface Task extends Note {
-    teamMember: User;
-}
-
 export interface User {
     id: number,
     name: string,
