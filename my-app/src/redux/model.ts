@@ -13,7 +13,7 @@ export interface Activity {
     type: ActivityType,
     propertyURL?: string;
     notes: string;
-    teamMember?: User;
+    assignee?: User;
 }
 
 export enum ActivityType {

@@ -30,11 +30,11 @@ export const initialList: Activity[] = [
         propertyURL: 'https://www.perchpeek.com/properties/XyD3Slx4Rj7EaAHzVB4M',
         notes: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum id cumque nesciunt reprehenderit vel velit libero exercitationem adipisci consequatur amet eos, illum deserunt veritatis. Animi sapiente reiciendis quas quibusdam repudiandae.',
         type: ActivityType.enquiry,
-        teamMember: {
-            id: 0,
-            name: 'John Doe',
-            email: 'John.Doe@perchpeek.com'
-        }
+        assignee: {
+            id: 1, 
+            name: 'Jane Doe',
+            email: 'Jane.Doe@perchpeek.com'
+        },
     }
 ]
 

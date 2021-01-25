@@ -6,6 +6,7 @@ import TabBar from './Components/TabBar/TabBar'
 
 import UserCardContainer from './Containers/UserCardContainer/UserCardContainer'
 import TabPanelContainer from './Containers/TabPanelContainer/TabPanelContainer'
+import AddActivityModalContainer from './Containers/AddActivityModalContainer/AddActivityModalContainer'
 
 import { CssBaseline } from '@material-ui/core'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
@@ -13,19 +14,19 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 export const App: React.FC = () => {
 
   const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      display: 'flex',
-    },
-    toolbar: theme.mixins.toolbar,
-    content: {
-      flexGrow: 1,
-      padding: theme.spacing(5),
-    },
-  }))
+    createStyles({
+      root: {
+        display: 'flex',
+      },
+      toolbar: theme.mixins.toolbar,
+      content: {
+        flexGrow: 1,
+        padding: theme.spacing(5),
+      },
+    })
+  );
 
   const classes = useStyles();
-  // const theme = useTheme();
 
   return (
     <Router>
@@ -40,6 +41,7 @@ export const App: React.FC = () => {
           <TabBar />
           <TabPanelContainer />
         </main>
+        <AddActivityModalContainer />
       </div>
     </Router>
   );
